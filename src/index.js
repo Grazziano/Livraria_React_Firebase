@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+
+import * as firebase from 'firebase/app'
+import 'firebase/firestore'
+
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyCha8mmSWOFxOk1uPu2YpVMutsKWHbNmRE",
+  authDomain: "leiloesta.firebaseapp.com",
+  databaseURL: "https://leiloesta.firebaseio.com",
+  projectId: "leiloesta",
+  storageBucket: "leiloesta.appspot.com",
+  messagingSenderId: "939583755513",
+  appId: "1:939583755513:web:796049fbb9dcc04010be28"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
